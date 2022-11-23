@@ -1,0 +1,16 @@
+<page-header title="label.signIn" [showButton]="false"></page-header>
+<ion-content>
+	<form [formGroup]="form">
+		<ion-item>
+			<ion-label position="floating">{{ 'label.email' | translate }}</ion-label>
+			<ion-input formControlName="email" [clearInput]="true"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label position="floating">{{ 'label.password' | translate }}</ion-label>
+			<ion-input formControlName="password" type="password" [clearInput]="true"></ion-input>
+		</ion-item>
+
+		<ion-button expand="full" (click)="signIn()" [disabled]="!form.valid"> {{ 'label.signIn' | translate }} </ion-button>
+	</form>
+</ion-content>

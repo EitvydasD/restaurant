@@ -1,0 +1,42 @@
+<page-header title="label.profile"></page-header>
+
+<ion-content>
+	<form [formGroup]="form">
+		<ion-item>
+			<ion-label position="floating">{{ 'label.firstName' | translate }}</ion-label>
+			<ion-input formControlName="firstName"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label position="floating">{{ 'label.lastName' | translate }}</ion-label>
+			<ion-input formControlName="lastName"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label position="floating">{{ 'label.birthDate' | translate }}</ion-label>
+			<ion-input formControlName="birthDate"> </ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label position="floating">{{ 'label.email' | translate }}</ion-label>
+			<ion-input formControlName="email"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label position="floating">{{ 'label.phone' | translate }}</ion-label>
+			<ion-input formControlName="phone"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label position="floating">{{ 'label.address' | translate }}</ion-label>
+			<ion-input formControlName="address"></ion-input>
+		</ion-item>
+		<icon-button
+			[title]="'action.save' | translate"
+			color="success"
+			icon="save-outline"
+			(onClick)="save()"
+			[disabled]="form.invalid"
+		></icon-button>
+	</form>
+</ion-content>

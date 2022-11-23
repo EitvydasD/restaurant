@@ -1,0 +1,77 @@
+{
+	"label": {
+		"signIn": "Prisijungti",
+		"signUp": "Užsiregistuoti",
+		"password": "Slaptažodis",
+		"firstName": "Vardas",
+		"lastName": "Pavardė",
+		"email": "El. paštas",
+		"phone": "Telefono numeris",
+		"address": "Adresas",
+		"city": "Miestas",
+		"state": "Valstija",
+		"zip": "Pašto kodas",
+		"country": "Šalis",
+		"birthDate": "Gimimo data",
+		"tables": "Stalai",
+		"menu": "Meniu",
+		"cart": "Krepšelis",
+		"settings": "Nustatymai",
+		"profile": "Profilis",
+		"sum": "Suma",
+		"cartEmpty": "Jūsų krepšelis tuščias",
+		"confirmPassword": "Patvirtinkite slaptažodį"
+	},
+
+	"action": {
+		"addToCart": "Pridėti į krepšelį",
+		"save": "Išsaugoti",
+		"request": "Užsakyti"
+	},
+
+	"menu": {
+		"snacks": {
+			"title": "Užkandžiai",
+			"cookies": "Sausainiai",
+			"chips": "Traškučiai"
+		},
+		"mainMeals": {
+			"title": "Karšti patiekalai",
+			"pizza": "Pica",
+			"burger": "Burgeris",
+			"sandwich": "Sumuštinis",
+			"hotdog": "Dešrainis"
+		},
+		"sides": {
+			"title": "Priedai",
+			"fries": "Bulvytės",
+			"salad": "Salotos",
+			"cheese": "Sūris"
+		},
+		"desserts": {
+			"title": "Desertai",
+			"iceCream": "Ledai",
+			"cake": "Tortas"
+		},
+		"drinks": {
+			"title": "Gėrimai",
+			"soda": "Gazuotas gėrimas",
+			"tea": "Arbata",
+			"coffee": "Kava"
+		}
+	},
+
+	"settings": {
+		"receiveNotifications": "Gauti pranešimus",
+		"contactSupport": "Susisiekti su pagalba",
+		"leaveReview": "Palikti atsiliepimą"
+	},
+
+	"table": {
+		"2": "2 vietos",
+		"4": "4 vietos",
+		"6": "6 vietos",
+		"8": "8 vietos",
+		"10+": "10+ vietų"
+	}
+}

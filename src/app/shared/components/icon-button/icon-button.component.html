@@ -1,0 +1,4 @@
+<ion-button [color]="color" [disabled]="disabled" [expand]="expand" (click)="onClick.emit()">
+	<ion-icon *ngIf="icon" [name]="icon" slot="icon-only" style="margin-right: 0.5rem"></ion-icon>
+	{{ title }}
+</ion-button>

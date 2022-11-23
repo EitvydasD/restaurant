@@ -1,0 +1,22 @@
+<ion-header>
+	<div style="display: flex; justify-content: space-between; align-items: center; margin: 0 1rem; min-height: 3rem">
+		<h4 style="margin: 0">{{ title | translate }}</h4>
+		<div style="display: flex">
+			<ion-img
+				*ngIf="culture.isoCode !== 'lt'"
+				(click)="changeCulture('lt')"
+				src="assets/img/flags/lt.png"
+				style="width: 3.25rem; cursor: pointer"
+			></ion-img>
+			<ion-img
+				*ngIf="culture.isoCode !== 'en'"
+				(click)="changeCulture('en')"
+				src="assets/img/flags/en.png"
+				style="width: 3.25rem; cursor: pointer"
+			></ion-img>
+			<ion-button *ngIf="showButton" style="margin-left: 1.5rem" (click)="signOut()" color="danger">
+				<ion-icon name="log-out-outline"></ion-icon>
+			</ion-button>
+		</div>
+	</div>
+</ion-header>
