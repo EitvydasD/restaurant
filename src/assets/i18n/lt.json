@@ -20,13 +20,16 @@
 		"profile": "Profilis",
 		"sum": "Suma",
 		"cartEmpty": "Jūsų krepšelis tuščias",
-		"confirmPassword": "Patvirtinkite slaptažodį"
+		"confirmPassword": "Patvirtinkite slaptažodį",
+		"left": "Likę",
+		"requested": "Užsakyta"
 	},
 
 	"action": {
 		"addToCart": "Pridėti į krepšelį",
 		"save": "Išsaugoti",
-		"request": "Užsakyti"
+		"request": "Užsakyti",
+		"pay": "Apmokėti"
 	},
 
 	"menu": {

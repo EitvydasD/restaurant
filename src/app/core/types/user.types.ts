@@ -18,7 +18,7 @@ export class UserHelpers {
 			birthDate: new FormControl({ value: UserHelpers.formatBirthDate(user?.birthDate ?? new Date()), disabled: true }, [
 				Validators.required,
 			]),
-			email: new FormControl({ value: user?.email ?? '', disabled: true }, [Validators.required, Validators.email]),
+			email: new FormControl({ value: user?.email ?? '', disabled: false }, [Validators.required, Validators.email]),
 			phone: new FormControl({ value: user?.phone ?? '', disabled: false }, [Validators.required]),
 			address: new FormControl({ value: user?.address ?? '', disabled: false }, [Validators.required]),
 		});

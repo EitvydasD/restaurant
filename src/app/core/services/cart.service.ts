@@ -20,13 +20,10 @@ export class CartService {
 
 	public addToCart(menuItems: MenuItem[]): void {
 		menuItems.forEach((menuItem) => {
-			if (menuItem.quantity <= 0) {
-				return;
-			}
 			const item = this.cart.find((x) => x.title === menuItem.title);
 			if (item) {
 				item.quantity += menuItem.quantity;
-			} else {
+			} else if (menuItem.quantity > 0) {
 				this.cart.push(menuItem);
 			}
 		});

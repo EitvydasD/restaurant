@@ -2,14 +2,29 @@
 <ion-content>
 	<ion-list>
 		<ion-item *ngFor="let item of tables">
-			<ion-label>{{ item.title | translate }}</ion-label>
+			<ion-label>{{ item.title | translate }} ({{ item.max }} {{ 'label.left' | translate }})</ion-label>
 
 			<div style="display: flex; align-items: center">
-				<ion-button (click)="changeQuantity(item, -1)"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
-				<ion-button>{{ item.quantity }}</ion-button>
-				<ion-button (click)="changeQuantity(item, 1)"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+				<ion-button [disabled]="item.max === 0" (click)="changeQuantity(item, -1)"
+					><ion-icon name="remove-circle-outline"></ion-icon
+				></ion-button>
+				<ion-button [disabled]="item.max === 0">{{ item.quantity }}</ion-button>
+				<ion-button [disabled]="item.max === 0" (click)="changeQuantity(item, 1)"
+					><ion-icon name="add-circle-outline"></ion-icon
+				></ion-button>
 			</div>
 		</ion-item>
 	</ion-list>
-	<icon-button icon="paper-plane-outline" color="success" [title]="'action.request' | translate"></icon-button>
+	<icon-button icon="paper-plane-outline" color="success" (onClick)="request()" [title]="'action.request' | translate"></icon-button>
+
+	<ion-card *ngIf="requestedTables.length > 0">
+		<ion-card-header>
+			<ion-card-title>{{ 'label.requested' | translate }}</ion-card-title>
+		</ion-card-header>
+		<ion-card-content>
+			<ion-item *ngFor="let item of requestedTables">
+				<ion-label>{{ item.title | translate }} ({{item.quantity}})</ion-label>
+			</ion-item>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

@@ -7,7 +7,7 @@ const config: CapacitorConfig = {
 	webDir: 'dist/restaurant',
 	bundledWebRuntime: false,
 	server: {
-		url: 'http://192.168.1.171:4200',
+		url: 'http://192.168.1.242:4200',
 		cleartext: true,
 	},
 };

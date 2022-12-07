@@ -5,12 +5,13 @@ import { SignInRequest } from '../types/auth.types';
 import { User } from '../types/user.types';
 import { decodeBase64, encodeBase64 } from '../utils/base64.utils';
 import { AccountService } from './account.service';
+import { CartService } from './cart.service';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class AuthService {
-	constructor(private router: Router, private accountService: AccountService) {
+	constructor(private router: Router, private accountService: AccountService, private cartService: CartService) {
 		// Nothing
 	}
 
@@ -87,6 +88,8 @@ export class AuthService {
 
 		localStorage.removeItem(this.TokenStorage);
 		localStorage.removeItem(this.UserIdStorage);
+
+		this.cartService.clearCart();
 
 		this.router.navigate([this.LoginPage]);
 	}

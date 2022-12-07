@@ -23,6 +23,12 @@ export class CartComponent {
 		if (quantity < 0 && menuItem.quantity === 0) {
 			return;
 		}
-		menuItem.quantity += quantity;
+
+		this.cartService.addToCart([{ ...menuItem, quantity: quantity }]);
+	}
+
+	public pay(): void {
+		this.cartService.clearCart();
+		this.cart = this.cartService.currentCart;
 	}
 }

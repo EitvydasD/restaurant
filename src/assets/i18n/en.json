@@ -20,13 +20,16 @@
 		"profile": "Profile",
 		"sum": "Sum",
 		"cartEmpty": "Your cart is empty",
-		"confirmPassword": "Confirm password"
+		"confirmPassword": "Confirm password",
+		"left": "Left",
+		"requested": "Requested"
 	},
 
 	"action": {
 		"addToCart": "Add to cart",
 		"save": "Save",
-		"request": "Request"
+		"request": "Request",
+		"pay": "Pay"
 	},
 
 	"menu": {
